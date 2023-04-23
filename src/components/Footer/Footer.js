@@ -154,7 +154,7 @@ const Footer = () => {
                 </linearGradient>
               </defs>
             </svg>
-            Flowbite
+            Lite Logo
           </Link>
           <p class="my-6 text-gray-500 dark:text-gray-400">
             Open-source library of over 400+ web components and interactive
@@ -186,7 +186,7 @@ const Footer = () => {
             </li>
           </ul>
           <span class="text-sm text-gray-500 sm:text-center dark:text-gray-400">
-            © 2021-2022 <Link class="hover:underline">Flowbite™</Link>. All
+            © 2021-2022 <Link class="hover:underline">Lite Logo</Link>. All
             Rights Reserved.
           </span>
         </div>
