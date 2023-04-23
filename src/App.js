@@ -8,6 +8,7 @@ import Private1 from "./page/Private1/Private1";
 import Private2 from "./page/Private2/Private2";
 import NotFound from "./page/NotFound/NotFound";
 import AllUsers from "./page/AllUsers/AllUsers";
+import Details from "./page/Details/Details";
 
 function App() {
   return (
@@ -17,6 +18,7 @@ function App() {
         <Route path="/" element={<Home />} />
         <Route path="/private1" element={<Private1 />} />
         <Route path="/private2" element={<Private2 />} />
+        <Route path="/details/:userId" element={<Details />} />
         <Route path="/allUsers" element={<AllUsers />} />
         <Route path="/logIn" element={<LogIn />} />
         <Route path="*" element={<NotFound />} />
