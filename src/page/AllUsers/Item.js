@@ -1,6 +1,7 @@
 import React from "react";
 import { Link } from "react-router-dom";
 import DeleteButton from "../../components/Button/DeleteButton";
+import LinkButton from "../../components/Button/LinkButton";
 
 const Item = () => {
   const id = 2;
@@ -31,11 +32,8 @@ const Item = () => {
         </p>
         <div className="w-full flex justify-center pt-8">
           <div className="flex  items-center">
-            <Link to={`/details/:${id || 1}`}>
-              <button class="text-white bg-primary-700 hover:bg-primary-800 focus:ring-4 focus:ring-primary-300 font-medium rounded-lg text-sm px-4 lg:px-5 py-2 lg:py-2.5 mr-2 dark:bg-primary-600 dark:hover:bg-primary-700 focus:outline-none dark:focus:ring-primary-800">
-                Details
-              </button>
-            </Link>
+            <LinkButton url={`/update/${id || 1}`} name={"Update"} />
+            <LinkButton url={`/details/${id || 1}`} name={"Details"} />
             <DeleteButton />
           </div>
         </div>
