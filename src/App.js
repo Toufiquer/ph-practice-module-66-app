@@ -12,6 +12,7 @@ import Details from "./page/Details/Details";
 import Add from "./page/Add/Add";
 import Update from "./page/Update/Update";
 import RequireAuth from "./utils/RequireAuth/RequireAuth";
+import PublicRoute from "./utils/RequireAuth/PublicRoute";
 
 function App() {
   return (
@@ -39,7 +40,14 @@ function App() {
         <Route path="/allUsers" element={<AllUsers />} />
         <Route path="/add" element={<Add />} />
         <Route path="/update/:userId" element={<Update />} />
-        <Route path="/logIn" element={<LogIn />} />
+        <Route
+          path="/logIn"
+          element={
+            <PublicRoute>
+              <LogIn />
+            </PublicRoute>
+          }
+        />
         <Route path="*" element={<NotFound />} />
       </Routes>
       <Footer />
