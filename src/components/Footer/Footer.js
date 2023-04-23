@@ -4,14 +4,14 @@ import { Link } from "react-router-dom";
 const Footer = () => {
   return (
     <>
-      <footer class="p-4 bg-white md:p-8 lg:p-10 dark:bg-gray-800">
-        <div class="mx-auto max-w-screen-xl text-center">
+      <footer className="p-4 bg-white md:p-8 lg:p-10 dark:bg-gray-800">
+        <div className="mx-auto max-w-screen-xl text-center">
           <Link
             to="/"
-            class="flex justify-center items-center text-2xl font-semibold text-gray-900 dark:text-white"
+            className="flex justify-center items-center text-2xl font-semibold text-gray-900 dark:text-white"
           >
             <svg
-              class="mr-2 h-8"
+              className="mr-2 h-8"
               viewBox="0 0 33 33"
               fill="none"
               xmlns="http://www.w3.org/2000/svg"
@@ -61,8 +61,8 @@ const Footer = () => {
                   y2="12.9901"
                   gradientUnits="userSpaceOnUse"
                 >
-                  <stop stop-color="#1724C9" />
-                  <stop offset="1" stop-color="#1C64F2" />
+                  <stop stopColor="#1724C9" />
+                  <stop offset="1" stopColor="#1C64F2" />
                 </linearGradient>
                 <linearGradient
                   id="paint1_linear_11430_22515"
@@ -72,8 +72,8 @@ const Footer = () => {
                   y2="2.33321"
                   gradientUnits="userSpaceOnUse"
                 >
-                  <stop stop-color="#1C64F2" />
-                  <stop offset="1" stop-color="#0092FF" />
+                  <stop stopColor="#1C64F2" />
+                  <stop offset="1" stopColor="#0092FF" />
                 </linearGradient>
                 <linearGradient
                   id="paint2_linear_11430_22515"
@@ -83,8 +83,8 @@ const Footer = () => {
                   y2="5.99375"
                   gradientUnits="userSpaceOnUse"
                 >
-                  <stop stop-color="#0092FF" />
-                  <stop offset="1" stop-color="#45B2FF" />
+                  <stop stopColor="#0092FF" />
+                  <stop offset="1" stopColor="#45B2FF" />
                 </linearGradient>
                 <linearGradient
                   id="paint3_linear_11430_22515"
@@ -94,8 +94,8 @@ const Footer = () => {
                   y2="25.8192"
                   gradientUnits="userSpaceOnUse"
                 >
-                  <stop stop-color="#1C64F2" />
-                  <stop offset="1" stop-color="#0092FF" />
+                  <stop stopColor="#1C64F2" />
+                  <stop offset="1" stopColor="#0092FF" />
                 </linearGradient>
                 <linearGradient
                   id="paint4_linear_11430_22515"
@@ -105,8 +105,8 @@ const Footer = () => {
                   y2="24.1181"
                   gradientUnits="userSpaceOnUse"
                 >
-                  <stop stop-color="#1724C9" />
-                  <stop offset="1" stop-color="#1C64F2" />
+                  <stop stopColor="#1724C9" />
+                  <stop offset="1" stopColor="#1C64F2" />
                 </linearGradient>
                 <linearGradient
                   id="paint5_linear_11430_22515"
@@ -116,8 +116,8 @@ const Footer = () => {
                   y2="10.6178"
                   gradientUnits="userSpaceOnUse"
                 >
-                  <stop stop-color="#0092FF" />
-                  <stop offset="1" stop-color="#45B2FF" />
+                  <stop stopColor="#0092FF" />
+                  <stop offset="1" stopColor="#45B2FF" />
                 </linearGradient>
                 <linearGradient
                   id="paint6_linear_11430_22515"
@@ -127,8 +127,8 @@ const Footer = () => {
                   y2="20.4898"
                   gradientUnits="userSpaceOnUse"
                 >
-                  <stop stop-color="#1C64F2" />
-                  <stop offset="1" stop-color="#0092FF" />
+                  <stop stopColor="#1C64F2" />
+                  <stop offset="1" stopColor="#0092FF" />
                 </linearGradient>
                 <linearGradient
                   id="paint7_linear_11430_22515"
@@ -138,8 +138,8 @@ const Footer = () => {
                   y2="11.488"
                   gradientUnits="userSpaceOnUse"
                 >
-                  <stop stop-color="#1724C9" />
-                  <stop offset="1" stop-color="#1C64F2" />
+                  <stop stopColor="#1724C9" />
+                  <stop offset="1" stopColor="#1C64F2" />
                 </linearGradient>
                 <linearGradient
                   id="paint8_linear_11430_22515"
@@ -149,44 +149,44 @@ const Footer = () => {
                   y2="31.9579"
                   gradientUnits="userSpaceOnUse"
                 >
-                  <stop stop-color="#0092FF" />
-                  <stop offset="1" stop-color="#45B2FF" />
+                  <stop stopColor="#0092FF" />
+                  <stop offset="1" stopColor="#45B2FF" />
                 </linearGradient>
               </defs>
             </svg>
             Lite Logo
           </Link>
-          <p class="my-6 text-gray-500 dark:text-gray-400">
+          <p className="my-6 text-gray-500 dark:text-gray-400">
             Open-source library of over 400+ web components and interactive
             elements built for better web.
           </p>
-          <ul class="flex flex-wrap justify-center items-center mb-6 text-gray-900 dark:text-white">
+          <ul className="flex flex-wrap justify-center items-center mb-6 text-gray-900 dark:text-white">
             <li>
-              <Link class="mr-4 hover:underline md:mr-6 ">About</Link>
+              <Link className="mr-4 hover:underline md:mr-6 ">About</Link>
             </li>
             <li>
-              <Link class="mr-4 hover:underline md:mr-6">Premium</Link>
+              <Link className="mr-4 hover:underline md:mr-6">Premium</Link>
             </li>
             <li>
-              <Link class="mr-4 hover:underline md:mr-6 ">Campaigns</Link>
+              <Link className="mr-4 hover:underline md:mr-6 ">Campaigns</Link>
             </li>
             <li>
-              <Link class="mr-4 hover:underline md:mr-6">Blog</Link>
+              <Link className="mr-4 hover:underline md:mr-6">Blog</Link>
             </li>
             <li>
-              <Link class="mr-4 hover:underline md:mr-6">
+              <Link className="mr-4 hover:underline md:mr-6">
                 Affiliate Program
               </Link>
             </li>
             <li>
-              <Link class="mr-4 hover:underline md:mr-6">FAQs</Link>
+              <Link className="mr-4 hover:underline md:mr-6">FAQs</Link>
             </li>
             <li>
-              <Link class="mr-4 hover:underline md:mr-6">Contact</Link>
+              <Link className="mr-4 hover:underline md:mr-6">Contact</Link>
             </li>
           </ul>
-          <span class="text-sm text-gray-500 sm:text-center dark:text-gray-400">
-            © 2021-2022 <Link class="hover:underline">Lite Logo</Link>. All
+          <span className="text-sm text-gray-500 sm:text-center dark:text-gray-400">
+            © 2021-2022 <Link className="hover:underline">Lite Logo</Link>. All
             Rights Reserved.
           </span>
         </div>
