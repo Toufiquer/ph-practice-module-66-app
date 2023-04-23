@@ -11,6 +11,7 @@ import AllUsers from "./page/AllUsers/AllUsers";
 import Details from "./page/Details/Details";
 import Add from "./page/Add/Add";
 import Update from "./page/Update/Update";
+import RequireAuth from "./utils/RequireAuth/RequireAuth";
 
 function App() {
   return (
@@ -18,8 +19,22 @@ function App() {
       <Header />
       <Routes>
         <Route path="/" element={<Home />} />
-        <Route path="/private1" element={<Private1 />} />
-        <Route path="/private2" element={<Private2 />} />
+        <Route
+          path="/private1"
+          element={
+            <RequireAuth>
+              <Private1 />
+            </RequireAuth>
+          }
+        />
+        <Route
+          path="/private2"
+          element={
+            <RequireAuth>
+              <Private2 />
+            </RequireAuth>
+          }
+        />
         <Route path="/details/:userId" element={<Details />} />
         <Route path="/allUsers" element={<AllUsers />} />
         <Route path="/add" element={<Add />} />
