@@ -3,8 +3,8 @@ import { Link } from "react-router-dom";
 import DeleteButton from "../../components/Button/DeleteButton";
 import LinkButton from "../../components/Button/LinkButton";
 
-const Item = () => {
-  const id = 2;
+const Item = ({ data }) => {
+  const { _id: id, userName } = data || {};
   return (
     <>
       <div className={` border border-solid border-blue-600 rounded-lg p-8`}>
@@ -24,7 +24,7 @@ const Item = () => {
             </svg>
           </div>
         </div>
-        <h3 className="mb-2 text-xl font-bold dark:text-white">Marketing</h3>
+        <h3 className="mb-2 text-xl font-bold dark:text-white">{userName}</h3>
         <p className="text-gray-500 dark:text-gray-400">
           Plan it, create it, launch it. Collaborate seamlessly with all the
           organization and hit your marketing goals every month with our

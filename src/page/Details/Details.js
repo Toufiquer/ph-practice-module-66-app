@@ -1,10 +1,17 @@
-import React from "react";
+import React, { useEffect, useState } from "react";
 import { useParams } from "react-router-dom";
 import DeleteButton from "../../components/Button/DeleteButton";
 import LinkButton from "../../components/Button/LinkButton";
 
 const Details = () => {
+  const [details, setDetails] = useState({});
   const { userId } = useParams();
+  useEffect(() => {
+    fetch(`http://localhost:5000/user/${userId}`)
+      .then((res) => res.json())
+      .then((data) => setDetails(data));
+  }, [userId]);
+
   return (
     <>
       <section className="bg-white dark:bg-gray-900 text-center">
@@ -29,7 +36,7 @@ const Details = () => {
               </div>
             </div>
             <h3 className="mb-2 text-xl font-bold dark:text-white">
-              Marketing id: {userId}
+              {details?.userName || "Loading..."}
             </h3>
             <div className="w-full flex justify-center">
               {" "}

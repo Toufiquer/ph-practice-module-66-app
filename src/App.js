@@ -13,7 +13,8 @@ import Add from "./page/Add/Add";
 import Update from "./page/Update/Update";
 import RequireAuth from "./utils/RequireAuth/RequireAuth";
 import PublicRoute from "./utils/RequireAuth/PublicRoute";
-
+import { ToastContainer } from "react-toastify";
+import "react-toastify/dist/ReactToastify.css";
 function App() {
   return (
     <>
@@ -51,6 +52,7 @@ function App() {
         <Route path="*" element={<NotFound />} />
       </Routes>
       <Footer />
+      <ToastContainer />
     </>
   );
 }
