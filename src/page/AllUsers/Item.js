@@ -3,7 +3,7 @@ import { Link } from "react-router-dom";
 import DeleteButton from "../../components/Button/DeleteButton";
 import LinkButton from "../../components/Button/LinkButton";
 
-const Item = ({ data }) => {
+const Item = ({ data, reFetch }) => {
   const { _id: id, userName } = data || {};
   return (
     <>
@@ -34,7 +34,7 @@ const Item = ({ data }) => {
           <div className="flex  items-center">
             <LinkButton url={`/update/${id || 1}`} name={"Update"} />
             <LinkButton url={`/details/${id || 1}`} name={"Details"} />
-            <DeleteButton />
+            <DeleteButton userId={id} reFetch={reFetch} />
           </div>
         </div>
       </div>

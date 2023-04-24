@@ -1,11 +1,27 @@
 import React, { useState } from "react";
+import getToast from "../../utils/Toast/getToast";
+import { useNavigate } from "react-router-dom";
 
-const DeleteButton = () => {
+const DeleteButton = ({ userId, reFetch, isNavigate = false }) => {
   const [toggle, setToggle] = useState(false);
   const deleteToggle = () => {
     setToggle((pre) => !pre);
   };
+  const navigate = useNavigate();
+
   const handleConfirm = () => {
+    fetch(`http://localhost:5000/user/${userId}`, {
+      method: "DELETE",
+      headers: { "Content-Type": "application/json" },
+    })
+      .then((res) => res.json())
+      .then((data) => {
+        if (data.deletedCount === 1) {
+          typeof reFetch === "function" && reFetch(userId);
+          isNavigate && navigate("/allUsers");
+          getToast({ message: "Delete Success" });
+        }
+      });
     deleteToggle();
   };
   return (

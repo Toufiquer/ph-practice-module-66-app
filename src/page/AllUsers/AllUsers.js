@@ -3,6 +3,12 @@ import Item from "./Item";
 
 const AllUsers = () => {
   const [users, setUsers] = useState([]);
+  const reFetch = (id) => {
+    console.log(id, " => Line No: 7");
+    const otherUsers = users.filter((u) => u._id !== id);
+    console.log(users, otherUsers, " => Line No: 9");
+    setUsers(otherUsers);
+  };
   useEffect(() => {
     fetch("http://localhost:5000/users")
       .then((res) => res.json())
@@ -12,7 +18,9 @@ const AllUsers = () => {
   if (users.length === 0) {
     content = <p>Nothing Was Found</p>;
   } else {
-    content = users.map((user) => <Item key={user._id} data={user} />);
+    content = users.map((user) => (
+      <Item key={user._id} data={user} reFetch={reFetch} />
+    ));
   }
   return (
     <>

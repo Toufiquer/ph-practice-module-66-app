@@ -120,7 +120,7 @@ const Details = () => {
             <div className="w-full flex justify-center pt-8">
               <div className="flex  items-center">
                 <LinkButton url={`/update/${userId || 1}`} name={"Update"} />
-                <DeleteButton />
+                <DeleteButton userId={userId} isNavigate={true} />
               </div>
             </div>
           </div>
