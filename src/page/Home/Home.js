@@ -7,7 +7,10 @@ const Home = () => {
   useEffect(() => {
     fetch("http://localhost:5000/users")
       .then((res) => res.json())
-      .then((data) => setUsers(data));
+      .then((data) => {
+        data.length > 3 && (data.length = 3);
+        setUsers(data);
+      });
   }, []);
   let content;
   if (users.length === 0) {
