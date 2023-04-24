@@ -2,7 +2,7 @@ import React from "react";
 import { Link } from "react-router-dom";
 
 const Item = ({ data }) => {
-  const { id = 3 } = data || {};
+  const { _id: id, userName } = data || {};
   return (
     <>
       <Link to={`details/${id}`}>
@@ -23,7 +23,9 @@ const Item = ({ data }) => {
               </svg>
             </div>
           </div>
-          <h3 className="mb-2 text-xl font-bold dark:text-white">Marketing</h3>
+          <h3 className="mb-2 text-xl font-bold dark:text-white">
+            {userName || "Loading..."}
+          </h3>
           <p className="text-gray-500 dark:text-gray-400">
             Plan it, create it, launch it. Collaborate seamlessly with all the
             organization and hit your marketing goals every month with our

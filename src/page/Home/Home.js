@@ -1,8 +1,20 @@
-import React from "react";
+import React, { useEffect, useState } from "react";
 import Item from "./Item";
 import Hero from "./Hero";
 
 const Home = () => {
+  const [users, setUsers] = useState([]);
+  useEffect(() => {
+    fetch("http://localhost:5000/users")
+      .then((res) => res.json())
+      .then((data) => setUsers(data));
+  }, []);
+  let content;
+  if (users.length === 0) {
+    content = <p>Nothing Was Found</p>;
+  } else {
+    content = users.map((user) => <Item key={user._id} data={user} />);
+  }
   return (
     <>
       <Hero />
@@ -22,12 +34,7 @@ const Home = () => {
           {/* Title of Home Page  End*/}
 
           <div className="space-y-8 md:grid md:grid-cols-2 lg:grid-cols-3 md:gap-12 md:space-y-0">
-            <Item />
-            <Item />
-            <Item />
-            <Item />
-            <Item />
-            <Item />
+            {content}
           </div>
         </div>
       </section>
