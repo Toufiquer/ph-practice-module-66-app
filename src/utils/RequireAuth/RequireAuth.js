@@ -5,6 +5,7 @@ import { useAuthState } from "react-firebase-hooks/auth";
 
 const RequireAuth = ({ children }) => {
   let location = useLocation();
+  console.log(location, " => Line No: 17");
   const [user, loading, error] = useAuthState(auth);
   let content;
   if (loading && !error) {

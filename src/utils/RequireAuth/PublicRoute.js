@@ -1,10 +1,12 @@
 import React from "react";
-import { Navigate } from "react-router-dom";
+import { Navigate, useLocation } from "react-router-dom";
 import { auth } from "../../firebase";
 import { useAuthState } from "react-firebase-hooks/auth";
 
 const PublicRoute = ({ children }) => {
   const [user, loading, error] = useAuthState(auth);
+
+  let location = useLocation();
   let content;
   if (loading && !error) {
     content = <p>Loading...</p>;
@@ -20,7 +22,9 @@ const PublicRoute = ({ children }) => {
     // trying to go to when they were redirected. This allows us to send them
     // along to that page after they login, which is a nicer user experience
     // than dropping them off on the home page.
-    return <Navigate to="/" />;
+    let from = location.state?.from?.pathname || "/";
+
+    return <Navigate to={from} />;
   }
   return content;
 };

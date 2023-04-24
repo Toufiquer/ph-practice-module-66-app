@@ -14,7 +14,7 @@ const LogIn = () => {
   let from = location.state?.from?.pathname || "/";
   useEffect(() => {
     if (user) {
-      navigate(from, { replace: true });
+      navigate(`${from}`, { replace: true });
     }
   }, [user, navigate, from]);
   let content;
